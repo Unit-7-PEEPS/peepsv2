@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP LINK UP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./home.css">
+    <script type="module" src="./scripts/index.js"></script>
+    <title>Peeps</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-white">
+        <a class="navbar-brand" href="#">Peeps</a>
+        <button class="btn btn-primary btn-rounded">Logout</button>
+    </nav>
+
+    <!-- ///////User Profile -->
+
+    <div class="container gedf-wrapper">
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <div class="card">
+
+                    <div class="card-content pt20 pb20 profile-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid rounded-circle border border-dark"
+                            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M370.7 96.1C346.1 39.5 289.7 0 224 0S101.9 39.5 77.3 96.1C60.9 97.5 48 111.2 48 128v64c0 16.8 12.9 30.5 29.3 31.9C101.9 280.5 158.3 320 224 320s122.1-39.5 146.7-96.1c16.4-1.4 29.3-15.1 29.3-31.9V128c0-16.8-12.9-30.5-29.3-31.9zM336 144v16c0 53-43 96-96 96H208c-53 0-96-43-96-96V144c0-26.5 21.5-48 48-48H288c26.5 0 48 21.5 48 48zM189.3 162.7l-6-21.2c-.9-3.3-3.9-5.5-7.3-5.5s-6.4 2.2-7.3 5.5l-6 21.2-21.2 6c-3.3 .9-5.5 3.9-5.5 7.3s2.2 6.4 5.5 7.3l21.2 6 6 21.2c.9 3.3 3.9 5.5 7.3 5.5s6.4-2.2 7.3-5.5l6-21.2 21.2-6c3.3-.9 5.5-3.9 5.5-7.3s-2.2-6.4-5.5-7.3l-21.2-6zM112.7 316.5C46.7 342.6 0 407 0 482.3C0 498.7 13.3 512 29.7 512H128V448c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64l98.3 0c16.4 0 29.7-13.3 29.7-29.7c0-75.3-46.7-139.7-112.7-165.8C303.9 338.8 265.5 352 224 352s-79.9-13.2-111.3-35.5zM176 448c-8.8 0-16 7.2-16 16v48h32V464c0-8.8-7.2-16-16-16zm96 32a16 16 0 1 0 0-32 16 16 0 1 0 0 32z" />
+                        </svg>
+                        <h4 class="card-title text-center">Casterly Olivier</h4>
+                        <h4 class="card-title text-center mb20">@cas.diddy</h4>
+                        <p>Hello, I am Casterly from Brooklyn, NY. I am a software engineering fellow at the Marcy Lab
+                            School.</p>
+                        <button class="btn btn-primary btn-rounded">Edit Profile</button>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 mb20">
+                                <h5>7</h5>
+                                <h6 class="text-small text-muted">Friends</h6>
+                            </div>
+                            <div class="col-md-4 mb20">
+                                <h5>7</h5>
+                                <h6 class="text-small text-muted">Communities</h6>
+                            </div>
+                            <div class="col-md-4 mb20">
+                                <h5>7</h5>
+                                <h6 class="text-small text-muted">Posts</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Communities</h4>
+                        <button class="btn btn-primary btn-rounded">Create Community</button>
+                        <table class="table table-light table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>MyCommunity</th>
+                                </tr>
+                                <tr>
+                                    <th>YourCommunity</th>
+                                </tr>
+                                <tr>
+                                    <th>OurCommunity</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--skill bar-->
+                </div>
+            </div>
+
+            <!-- User Profile/////// -->
+
+            <div class="col-md-6 gedf-main">
+
+                <!--- \\\\\\\Make Post-->
+                <div class="post-container card gedf-card">
+                    <div class="wrapper">
+                        <section class="post">
+                            <header>Create Post</header>
+                            <form action="#">
+                                <div class="content">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="img-fluid rounded-circle border border-dark" style="width: 70px;"
+                                        viewBox="0 0 448 512">
+                                        <path
+                                            d="M370.7 96.1C346.1 39.5 289.7 0 224 0S101.9 39.5 77.3 96.1C60.9 97.5 48 111.2 48 128v64c0 16.8 12.9 30.5 29.3 31.9C101.9 280.5 158.3 320 224 320s122.1-39.5 146.7-96.1c16.4-1.4 29.3-15.1 29.3-31.9V128c0-16.8-12.9-30.5-29.3-31.9zM336 144v16c0 53-43 96-96 96H208c-53 0-96-43-96-96V144c0-26.5 21.5-48 48-48H288c26.5 0 48 21.5 48 48zM189.3 162.7l-6-21.2c-.9-3.3-3.9-5.5-7.3-5.5s-6.4 2.2-7.3 5.5l-6 21.2-21.2 6c-3.3 .9-5.5 3.9-5.5 7.3s2.2 6.4 5.5 7.3l21.2 6 6 21.2c.9 3.3 3.9 5.5 7.3 5.5s6.4-2.2 7.3-5.5l6-21.2 21.2-6c3.3-.9 5.5-3.9 5.5-7.3s-2.2-6.4-5.5-7.3l-21.2-6zM112.7 316.5C46.7 342.6 0 407 0 482.3C0 498.7 13.3 512 29.7 512H128V448c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64l98.3 0c16.4 0 29.7-13.3 29.7-29.7c0-75.3-46.7-139.7-112.7-165.8C303.9 338.8 265.5 352 224 352s-79.9-13.2-111.3-35.5zM176 448c-8.8 0-16 7.2-16 16v48h32V464c0-8.8-7.2-16-16-16zm96 32a16 16 0 1 0 0-32 16 16 0 1 0 0 32z" />
+                                    </svg>
+                                    <div class="details">
+                                        <p>cas.diddy</p>
+                                        <div class="privacy">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span>Friends</span>
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <textarea placeholder="What's on your mind?" spellcheck="false" required
+                                    class="border border-dark"></textarea>
+                                <button class="btn btn-primary btn-rounded">Post</button>
+                            </form>
+                        </section>
+                        <section class="audience">
+                            <header>
+                                <div class="arrow-back"><i class="fas fa-arrow-left"></i></div>
+                                <p>Select Audience</p>
+                            </header>
+                            <div class="content">
+                                <p>Who can see your post?</p>
+                                <span>Your post will show up in News Feed, on your profile and in search results.</span>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <div class="column">
+                                        <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                                        <div class="details">
+                                            <p>Public</p>
+                                            <span>Anyone on or off Facebook</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio"></div>
+                                </li>
+                                <li class="active">
+                                    <div class="column">
+                                        <div class="icon"><i class="fas fa-user-friends"></i></div>
+                                        <div class="details">
+                                            <p>Friends</p>
+                                            <span>Your friends on Facebook</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio"></div>
+                                </li>
+                                <li>
+                                    <div class="column">
+                                        <div class="icon"><i class="fas fa-user"></i></div>
+                                        <div class="details">
+                                            <p>Specific</p>
+                                            <span>Only show to some friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio"></div>
+                                </li>
+                                <li>
+                                    <div class="column">
+                                        <div class="icon"><i class="fas fa-lock"></i></div>
+                                        <div class="details">
+                                            <p>Only me</p>
+                                            <span>Only you can see your post</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio"></div>
+                                </li>
+                                <li>
+                                    <div class="column">
+                                        <div class="icon"><i class="fas fa-cog"></i></div>
+                                        <div class="details">
+                                            <p>Custom</p>
+                                            <span>Include and exclude friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio"></div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <!-- Make Post /////-->
+
+                <!-- ///////Post -->
+                <section>
+                    <div class="card" style="max-width: 42rem">
+                        <div class="card-body">
+                            <!-- Data -->
+                            <div class="d-flex mb-3">
+                                <a href="">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/18.webp"
+                                        class="border rounded-circle me-2" alt="Avatar" style="height: 40px" />
+                                </a>
+                                <div>
+                                    <a href="" class="text-dark mb-0">
+                                        <strong>Anna Doe</strong>
+                                    </a>
+                                    <a href="" class="text-muted d-block" style="margin-top: -6px">
+                                        <small>10h</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Atque ex non impedit corporis sunt nisi nam fuga
+                                    dolor est, saepe vitae delectus fugit, accusantium qui
+                                    nulla aut adipisci provident praesentium?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Media -->
+                        <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/people/077.webp" class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                            </a>
+                        </div>
+                        <!-- Media -->
+                        <!-- Interactions -->
+                        <div class="card-body">
+                            <!-- Reactions -->
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <a href="">
+                                        <i class="fas fa-thumbs-up text-primary"></i>
+                                        <i class="fas fa-heart text-danger"></i>
+                                        <span>124</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="" class="text-muted"> 8 comments </a>
+                                </div>
+                            </div>
+                            <!-- Reactions -->
+
+                            <!-- Buttons -->
+                            <div class="d-flex justify-content-between text-center border-top border-bottom mb-4">
+                                <button type="button" class="btn btn-link btn-lg" data-mdb-ripple-color="dark">
+                                    <i class="fas fa-thumbs-up me-2"></i>Like
+                                </button>
+                                <button type="button" class="btn btn-link btn-lg" data-mdb-ripple-color="dark">
+                                    <i class="fas fa-comment-alt me-2"></i>Comment
+                                </button>
+                                <button type="button" class="btn btn-link btn-lg" data-mdb-ripple-color="dark">
+                                    <i class="fas fa-share me-2"></i>Share
+                                </button>
+                            </div>
+                            <!-- Buttons -->
+
+                            <!-- Comments -->
+
+                            <!-- Input -->
+                            <div class="d-flex mb-3">
+                                <a href="">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/18.webp"
+                                        class="border rounded-circle me-2" alt="Avatar" style="height: 40px" />
+                                </a>
+                                <div class="form-outline w-100">
+                                    <textarea class="form-control" id="textAreaExample" rows="2"></textarea>
+                                    <label class="form-label" for="textAreaExample">Write a comment</label>
+                                </div>
+                            </div>
+                            <!-- Input -->
+
+                            <!-- Answers -->
+
+                            <!-- Single answer -->
+                            <div class="d-flex mb-3">
+                                <a href="">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+                                        class="border rounded-circle me-2" alt="Avatar" style="height: 40px" />
+                                </a>
+                                <div>
+                                    <div class="bg-light rounded-3 px-3 py-1">
+                                        <a href="" class="text-dark mb-0">
+                                            <strong>Malcolm Dosh</strong>
+                                        </a>
+                                        <a href="" class="text-muted d-block">
+                                            <small>Lorem ipsum dolor sit amet consectetur,
+                                                adipisicing elit. Natus, aspernatur!</small>
+                                        </a>
+                                    </div>
+                                    <a href="" class="text-muted small ms-3 me-2"><strong>Like</strong></a>
+                                    <a href="" class="text-muted small me-2"><strong>Reply</strong></a>
+                                </div>
+                            </div>
+
+                            <!-- Answers -->
+
+                            <!-- Comments -->
+                        </div>
+                        <!-- Interactions -->
+                    </div>
+                </section>
+
+                <!-- ///////Post -->
+
+
+
+            </div>
+            <div class="col-md-3">
+                <div class="timeline">
+
+                    <!-- Timeline header -->
+                    <div class="timeline-header">
+                        <div class="timeline-header-title bg-success">Now</div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon"><img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    alt="Profile picture">
+                            </div>
+                            <div class="timeline-time">30 Min ago</div>
+                        </div>
+                        <div class="timeline-label">
+                            <p class="mar-no pad-btm"><a href="#" class="btn-link text-semibold">Maria J.</a> shared an
+                                image</p>
+                            <div class="img-holder">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon bg-danger"><i class="fa fa-building fa-lg"></i>
+                            </div>
+                            <div class="timeline-time">2 Hours ago</div>
+                        </div>
+                        <div class="timeline-label">
+                            <h4 class="mar-no pad-btm"><a href="#" class="text-danger">Job Meeting</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                tincidunt.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon"><img src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                                    alt="Profile picture">
+                            </div>
+                            <div class="timeline-time">3 Hours ago</div>
+                        </div>
+                        <div class="timeline-label">
+                            <p class="mar-no pad-btm"><a href="#" class="btn-link text-semibold">Lisa D.</a> commented
+                                on <a href="#">The Article</a>
+                            </p>
+                            <blockquote class="bq-sm bq-open">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                sed diam nonummy nibh euismod tincidunt.</blockquote>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon bg-purple"><i class="fa fa-check fa-lg"></i>
+                            </div>
+                            <div class="timeline-time">5 Hours ago</div>
+                        </div>
+                        <div class="timeline-label">
+                            <img class="img-xs img-circle" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                alt="Profile picture">
+                            <a href="#" class="btn-link text-semibold">Bobby Marz</a> followed you.
+                        </div>
+                    </div>
+
+                    <!-- Timeline header -->
+                    <div class="timeline-header">
+                        <div class="timeline-header-title bg-dark">Yesterday</div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon bg-info"><i class="fa fa-envelope fa-lg"></i>
+                            </div>
+                            <div class="timeline-time">15:45</div>
+                        </div>
+                        <div class="timeline-label">
+                            <h4 class="text-info mar-no pad-btm">Lorem ipsum dolor sit amet</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                tincidunt.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon bg-success"><i class="fa fa-thumbs-up fa-lg"></i>
+                            </div>
+                            <div class="timeline-time">13:27</div>
+                        </div>
+                        <div class="timeline-label">
+                            <img class="img-xs img-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                alt="Profile picture">
+                            <a href="#" class="btn-link text-semibold">Michael Both</a> Like <a href="#">The Article</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-stat">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-time">11:27</div>
+                        </div>
+                        <div class="timeline-label">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                tincidunt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.querySelector(".post-container"),
+            privacy = container.querySelector(".post .privacy"),
+            arrowBack = container.querySelector(".audience .arrow-back");
+        privacy.addEventListener("click", () => {
+            container.classList.add("active");
+        });
+        arrowBack.addEventListener("click", () => {
+            container.classList.remove("active");
+        });
+    </script>
+</body>
+
+</html>

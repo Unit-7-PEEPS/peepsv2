@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+/* This commented code will make the Nav content appear on the right side */
+
+/* header {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 0% 45%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+
+form {
+    margin: 0% 40%;
+    border-radius: 25px;
+    color: white
+}
+
+.mb-3 {
+    padding: 8% 20%
+}
+
+#passHelp {
+    color: grey;
+  }
+  
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.btn-primary {
+    background-color: #00A3FF;
+    border-color: #00A3FF;
+}
+
+.signUp {
+    display: flex;
+    justify-content: center;
+    margin: 1% 40% 0%;
+    padding: 1%;
+    border-radius: 25px;
+    color: #ffffff;
+    background-color: black;
+}
+
+.peeps-footer .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .peeps-info {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .peeps-links {
+    list-style: none;
+    padding: 0;
+    margin: 5% 0%;
+    text-align: center;
+  }
+  
+  .peeps-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .peeps-links li:first-child {
+    margin-left: 0;
+  }
+  
+  .peeps-links a {
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .peeps-links a:hover {
+    color: #000;
+  }
+  
+  
+  
