@@ -1,7 +1,7 @@
-const listUsers = async (req, res) => {
-  const { User } = req.db;
-  const users = await User.list();
+const listPosts = async (req, res) => {
+  const { Post } = req.db;
+  const post = await Post.list();
   res.send(users);
 };
 
-module.exports = listUsers;
+module.exports = listPosts;

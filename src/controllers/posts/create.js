@@ -2,10 +2,9 @@ const createPosts = async (req, res) => {
   const {
     session,
     db: { Post },
-    body: { communityId, content },
+    body: { content },
   } = req;
-  const post = await Post.create(communityId, content, session.userId);
-  session.userId = user.id;
+  const post = await Post.create(content, session.userId);
 
   res.send(post);
 };

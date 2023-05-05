@@ -75,6 +75,18 @@ const setNav = (hasLoggedInUser) => {
   document.querySelector('nav').innerHTML = navHtml;
 };
 
+// Create Post
+const makePostHandler = async (url, formData) => {
+  // const formData = new FormData(form);
+  const options = getFetchOptions(formData);
+  const [_response, err] = await handleFetch(url, options);
+  if (err) {
+    // form.reset();
+    return alert('Something went wrong');
+  }
+  window.location.assign('/index.html');
+};
+
 // This is wonky. Once you learn about bundlers we won't have to
 // explicitly create globals. We just lack the tools right now.
 Object.assign(window, {
@@ -85,6 +97,7 @@ Object.assign(window, {
   setNav,
   logOutHandler,
   updateUsernameHandler,
+  makePostHandler,
 });
 
 export {
@@ -95,4 +108,5 @@ export {
   setNav,
   logOutHandler,
   updateUsernameHandler,
+  makePostHandler,
 };

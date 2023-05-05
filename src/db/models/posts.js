@@ -7,19 +7,19 @@ class Post {
   // to provide the controller with instances that
   // have access to the instance methods isValidPassword
   // and update.
-  constructor({ id, communityId, userId, content, createdAt }) {
+  constructor({ id, userId, content, createdAt }) {
     this.id = id;
-    this.communityId = communityId;
+    // this.communityId = communityId;
     this.userId = userId;
     this.content = content;
     this.createdAt = createdAt;
     
   }
 
-  async getUserPosts(user) {
+  async getUserPosts(userId) {
     try {
       const query = 'SELECT * FROM posts WHERE user_id = ?';
-      const { rows } = await knex.raw(query, [user.id]);
+      const { rows } = await knex.raw(query, [userId]);
       rows.forEach((post) => {
         post
         if(!(user.posts.some((userPost) => userPost.id === post.id))) {
@@ -50,6 +50,17 @@ class Post {
     }
   }
 
+  async list () {
+    try {
+      const query = 'SELECT * FROM posts';
+      const { rows } = await knex.raw(query);
+      return rows;
+    } catch (err) {
+      console.error(err);
+      return null;
+    }
+  }
+
   // static async find(id) {
   //   try {
   //     const query = 'SELECT * FROM users WHERE id = ?';
@@ -72,11 +83,22 @@ class Post {
   //   }
   // }
   
-  createPost = async (communityId, content, userId) => {
+  static async create(content, userId) {
     try {
-      const query = `INSERT INTO posts (community_id, user_id, content) VALUES (?, ?, ?) RETURNING *`;
-      const { rows: [post] } = await knex.raw(query, [community_id, this.id, content]);
+      const query = `INSERT INTO posts (user_id, content) VALUES (?, ?) RETURNING *`;
+      const { rows: [post] } = await knex.raw(query, [userId, content]);
       return new Post(post);
+    } catch (err) {
+      console.error(err);
+      return null;
+    }
+  }
+
+  static async delete(postId) {
+    try {
+      const query = 'DELETE FROM posts WHERE id = ? RETURNING *';
+      const { rows: [post] } = await knex.raw(query, [postId]);
+      return post;
     } catch (err) {
       console.error(err);
       return null;
@@ -113,4 +135,4 @@ class Post {
 
 }
 
-module.exports = User;
+module.exports = Post;

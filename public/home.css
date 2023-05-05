@@ -2,6 +2,10 @@ body {
     background-color: #eeeeee;
 }
 
+.navbar-brand img {
+    max-width: 70px;
+}
+
 .h7 {
     font-size: 0.8rem;
 }
